@@ -13,11 +13,13 @@ inputBtn.forEach((btn) => {
         resultScore.textContent = `You ${playerScore} : PC ${computerScore}`
 
         if(computerScore >= 5) {
-            resultScore.textContent = `You lost... the PC beat you with ${computerScore} : ${playerScore}`;
-            return "Click a Button to Retry"
+            resultText.textContent = `You lost... the PC beat you with ${computerScore} : ${playerScore}`;
+            resultScore.textContent = "Click a Button to Retry"
+            resetScore();
         } else if (playerScore >= 5) {
-            resultScore.textContent = `You won! You beat the PC with ${playerScore} : ${computerScore}`;
-            return "Click a Button to Retry"
+            resultText.textContent = `You won! You beat the PC with ${playerScore} : ${computerScore}`;
+            resultScore.textContent = "Click a Button to Retry"
+            resetScore();
         }
     })
 })
@@ -41,7 +43,7 @@ function playOneRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
     if(playerSelection === computerSelection) {
-        return `It's a tie. Both picked ${playerSelection}`;
+        return `It's a tie. Both picked ${playerSelection}.`;
     } else if (playerSelection === "rock" && computerSelection === "paper") {
         computerScore += 1;
         return `You Lose! Paper beats rock.`;
@@ -63,4 +65,7 @@ function playOneRound(playerSelection, computerSelection) {
     } 
 }
 
-
+function resetScore() {
+    playerScore = 0;
+    computerScore = 0;
+}

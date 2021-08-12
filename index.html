@@ -6,18 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-paper-scissors</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
+        <h1>Rock Paper Scissors</h1>
+
         <div class="resultContainer">
-            <div class="resultText"></div>
+            <div class="resultText"> Click a button to start</div>
             <div class="resultScore"></div>
-         </div>
-        <input type="button" name="rock" value="Rock" id="rockBtn" class="inputBtn">
-        <input type="button" name="paper" value="Paper" id="paperBtn" class="inputBtn">
-        <input type="button" name="scissors" value="Scissors" id="scissorsBtn" class="inputBtn">
+        </div>
+
+        <div class="inputContainer">
+            <input type="button" name="rock" value="Rock" id="rockBtn" class="inputBtn">
+            <input type="button" name="paper" value="Paper" id="paperBtn" class="inputBtn">
+            <input type="button" name="scissors" value="Scissors" id="scissorsBtn" class="inputBtn">
+        </div>
+
+        <p>© by benokla 2021 </p>
     </div>
-    
     
     <script src="app.js"></script>
 </body>
